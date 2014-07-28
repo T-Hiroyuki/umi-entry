@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main(void)
+{
+int year,minute;
+
+printf("指定する年を入力してください\n");
+scanf("%d",&year);
+
+//以下、閏年の判定。
+//4で割り切れる年を閏年とする。
+//例外として、100で割り切れて、400では割り切れない年を平年とする。
+
+if(year%4 !=0)
+{
+minute=365*24*60*60;
+
+} else if(year%400 ==0)
+   {
+   minute=366*24*60*60;
+   }else if(year%100 == 0)
+      {
+      minute=365*24*60*60;
+      }
+      else
+      {
+       minute=366*24*60*60;
+       }
+//閏年の判定終わり
+
+printf("%d年の合計秒数は%d秒です。",year,minute);
+
+}
