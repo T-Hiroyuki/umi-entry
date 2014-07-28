@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main(void)
+{
+int i;
+int N;
+N=51;
+
+double f[N];
+
+f[0]=0;
+f[1]=1;
+
+
+	for(i=2;i<=51;i++)
+	{
+	f[i]=f[i-1]+f[i-2];
+	}
+
+
+printf("30番目は%6.0f,40番目は%9.0f,50番目は%11.0f",f[30],f[40],f[50]);
+
+return 0;
+}
